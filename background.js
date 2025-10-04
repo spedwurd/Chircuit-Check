@@ -5,4 +5,5 @@ document.getElementById('clickMe').addEventListener('click', async () => {
     func: () => alert('Hello from your extension!')
   });
 });
-ff
+
+
