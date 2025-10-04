@@ -1,13 +1,16 @@
 {
   "manifest_version": 3,
   "name": "Eco-Boy",
-  "description": "Environmental assistant",
+  "description": "Environmental assistant 😛",
   "version": "1.0",
   "permissions": ["storage", "activeTab", "scripting", "tabs"],
   "action": {
-    "default_popup": "popup.html"
+    "default_popup": "popup.html",
+    "default-icon": {
+        "16": "images/icon16.jpeg"
+    }
   },
   "icons": {
-    "16": "images/icon.png"
+    "16": "images/icon16.jpeg"
   }
 }
