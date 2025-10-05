@@ -1,0 +1,128 @@
+body {
+  width: 220px;
+  font-weight: 500;
+  font-family: 'Tilt Warp', cursive;
+  text-align: center;
+  margin: 0;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 75vh;
+  background: linear-gradient(to bottom, #fdf5db, #ffe86d);
+}
+
+.title-image {
+  margin-bottom: 10px;
+  width: 200px;
+}
+/*img1 { margin-bottom: 12px; width: 180px; }
+#product { font-weight: 500; margin-bottom: 16px; font-size: 14px; color: #444; }
+*/
+.footprint-button {
+    background: none;
+    border-color: grey;
+    border-radius: 25px;
+    border-width: thin;
+    cursor: pointer;
+    padding: 0;
+    margin-bottom: 12px; /* spacing from other elements */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;   /* adjust to your footprint image size */
+    height: 80px;
+}
+
+.footprint-button img.footprint-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    pointer-events: none; /* prevents weird hover issues */
+}
+
+.rating-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width:190px;
+  min-height: 48px;
+  padding: 10px;
+  margin-bottom: 12px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.rating-container img {
+  width: 32px;
+  height: 40px;
+  transform: scale(0.6);
+  animation: popIn 0.4s ease forwards;
+  transition: transform 0.2s ease;
+}
+
+.rating-container img:hover { transform: scale(1.2); }
+
+@keyframes popIn {
+  0% { opacity: 0; transform: scale(0.6); }
+  60% { opacity: 1; transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* stagger animation for up to 5 images */
+.rating-container img:nth-child(1) { animation-delay: 0.1s; }
+.rating-container img:nth-child(2) { animation-delay: 0.25s; }
+.rating-container img:nth-child(3) { animation-delay: 0.4s; }
+.rating-container img:nth-child(4) { animation-delay: 0.55s; }
+.rating-container img:nth-child(5) { animation-delay: 0.7s; }
+
+.dropdown {
+  width: 220px;
+}
+
+details {
+  background: white;
+  border-radius: 8px;
+  padding: 10px 16px;
+  cursor: pointer;
+  border: 4px solid #ffe237;
+}
+
+summary {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  font-family: 'Tilt Warp', cursive;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+.arrow {
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 9px solid #222;
+  transition: transform 0.2s ease;
+}
+
+details[open] .arrow {
+  transform: rotate(180deg);
+}
+
+.panel {
+  margin-top: 8px;
+  font-weight: 400;
+  color: #222;
+  font-family: 'Tilt Warp', cursive;
+}
+
+.product {
+  margin-bottom: 6px;
+}
