@@ -26,6 +26,12 @@ function displayRating(score) {
 }
 }
 
+document.getElementById('note').addEventListener('click', () => {
+  chrome.tabs.create({ url: 'pages/local.html' });
+});
+
+
+
 
 // shitty web scraper 😭
 // add more fields later
@@ -69,5 +75,3 @@ document.getElementById("clickMe").addEventListener("click", async () => {
   document.getElementById("product").innerText = `Product scored: ${score}/5`;
   displayRating(Math.round(score));
 });
-
- 
